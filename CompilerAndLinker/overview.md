@@ -13,3 +13,5 @@
 
 ## Definitions vs Declarations
 Declarations show the compiler that an object _exists_.  Definitions explain what that object is. If an object (function or class) is not _declared_, there will be a compiler error. If the declaration exists but the object is not _defined_, there will be a linker error.
+
+source video: <https://www.youtube.com/watch?v=SfGuIVzE_Os&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=5>.
