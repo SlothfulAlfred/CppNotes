@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+
+\title{Variables in C++}
+\author{Alfred Mikhael}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{What are variables?}
+Variables are what we name the data that we manipulate when programming. Variables are stored in 
+memory, so that we can access them later. In most (if not all) languages, variables have \emph{types}.
+C++ is a \emph{statically typed} language, which means that these types are checked at compile time.
+
+\section{Primitive Types in C++}
+A primitive type is a variable type that is built into C++, not user defined. These types are the 
+building blocks of all other types in C++. All types are essentially just 0s and 1s, so the main 
+difference between them is the size that they occupy and the behaviour that programmers assume of it.
+
+\subsection{Integer types}
+The following are the primitive types used to store integers and their corresponding sizes.
+\begin{itemize}
+    \item {char, 1 byte}
+    \item {short, 2 bytes}
+    \item {int, 4 bytes}
+    \item {long, 4 bytes}
+    \item {long long, 8 bytes}
+\end{itemize}
+
+\subsection{Other primitive types}
+There are a few other primitive types that are not uesd to store integers.
+\begin{itemize}
+    \item {bool, stores true/false values, 1 byte}
+    \item {float, stores floating point numbers, 4 bytes}
+    \item {double, stores floating point numbers, 8 bytes}
+\end{itemize}
+
+\section{Usage of data types}
+The \verb$char$ type may be confusing; if it is just storing an integer, why is it treated differently?
+
+As programmers, we make assumptions about the usage of types so that we can create appropriate behaviour 
+for them. This is better shown by an example.
+
+\begin{lstlisting}[language=C++]
+#include <iostream>
+
+int main() {
+    char a = 65;
+    short b = 65;
+
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    cin.get()
+}
+\end{lstlisting}
+
+The output for this code will be:
+\begin{lstlisting}
+A
+65
+\end{lstlisting}
+
+This is because \verb$std::cout$ defines different behaviour for \verb$char$ types, although at the level of 
+the bytes, both variables look the same.
+
+\section{Sizeof operator}
+The sizes of variable types may depend on the specific compiler that you are using. You can access this information
+by using the \verb$Sizeof$ operator followed by whichever type you want to check. This may be useful for less common
+types like \verb$long double$.
+
+\end{document}
